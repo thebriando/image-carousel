@@ -6,25 +6,36 @@ export class WithoutLibrariesCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 0
+      current: 0,
+      transition: false
     };
   }
   next = () => {
+    this.setState({ transition: false });
     const current = this.state.current;
-    this.setState({ current: current === this.props.items.length - 1 ? 0 : current + 1 });
+    this.setState({ current: current === this.props.items.length - 1 ? 0 : current + 1, transition: true });
   };
   prev = () => {
+    this.setState({ transition: false });
     const current = this.state.current;
-    this.setState({ current: current === 0 ? this.props.items.length - 1 : current - 1 });
+    this.setState({ current: current === 0 ? this.props.items.length - 1 : current - 1, transition: true });
   };
   change = index => {
-    this.setState({ current: index });
+    this.setState({ transition: false });
+    this.setState({ current: index, transition: true });
   };
   render() {
-    const { current } = this.state;
+    const { current, transition } = this.state;
+    let imgClass = "wo-libraries-image";
+    transition && (imgClass += " transition");
     return (
       <Container>
-        <img src={this.props.items[current].src} alt={this.props.items[current].alt} className="wo-libraries-image" />
+        <img
+          key={this.props.items[current].src}
+          src={this.props.items[current].src}
+          alt={this.props.items[current].alt}
+          className={imgClass}
+        />
         <div className="wo-libraries-navigation">
           <button className="carousel-button prev" onClick={this.prev}>
             &lt;
@@ -35,15 +46,11 @@ export class WithoutLibrariesCarousel extends Component {
         </div>
         <div className="wo-libraries-selectors">
           {this.props.items.map((item, index) => {
-            let btnClass = "carousel-button";
+            let btnClass = "carousel-button selector";
             if (index === current) {
-              btnClass += " current"
+              btnClass += " current";
             }
-            return (
-              <button className={btnClass} onClick={() => this.change(index)}>
-                {index + 1}
-              </button>
-            );
+            return <button key={item.alt} className={btnClass} onClick={() => this.change(index)}></button>;
           })}
         </div>
       </Container>

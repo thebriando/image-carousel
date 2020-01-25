@@ -4,6 +4,23 @@
   margin: auto;
 }
 
+.transition {
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -ms-animation: fadein 1s;
+  -o-animation: fadein 1s; 
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .wo-libraries-navigation {
   display: inline-block;
   text-align: center;
@@ -19,7 +36,19 @@
   height: 2rem;
   width: 4rem;
   background: lightgray;
+  font-weight: bold;
   border: none;
+}
+
+.carousel-button:hover {
+  background: darkgray;
+}
+
+.carousel-button.selector {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0.25rem;
+  border-radius: 50%;
 }
 
 .current {
