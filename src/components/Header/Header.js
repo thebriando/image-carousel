@@ -1,15 +1,16 @@
 import React from "react";
 import { Jumbotron, Container, Nav, Navbar, NavItem, NavLink } from "reactstrap";
+import "./Header.css";
 
 export const Header = () => {
   return (
     <div>
-      <Jumbotron fluid>
+      <Jumbotron className="header-jumbotron" fluid>
         <Container fluid>
           <h1 className="display-3">Image Carousel</h1>
         </Container>
       </Jumbotron>
-      <Navbar color="light" light expand="md">
+      <Navbar className="header-navbar" color="light" light expand="md">
         <Nav navbar>
           <NavItem>
             <NavLink href="/with-libraries">With Libraries</NavLink>
