@@ -1,0 +1,27 @@
+.wo-libraries-image {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+.wo-libraries-navigation {
+  display: inline-block;
+  text-align: center;
+  /* margin: auto; */
+  width: 100%;
+}
+
+.wo-libraries-selectors {
+  text-align: center;
+}
+
+.carousel-button {
+  height: 2rem;
+  width: 4rem;
+  background: lightgray;
+  border: none;
+}
+
+.current {
+  background: gray;
+}
