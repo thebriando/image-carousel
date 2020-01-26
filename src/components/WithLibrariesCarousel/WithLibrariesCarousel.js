@@ -35,7 +35,6 @@ export class WithLibrariesCarousel extends Component {
             return (
               <CarouselItem key={item.src}>
                 <img className="carousel-image" src={item.src} alt={item.altText} />
-                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
               </CarouselItem>
             );
           })}
