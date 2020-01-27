@@ -1,15 +1,15 @@
 export const images = [
   {
-    src: "https://mms.businesswire.com/media/20181207005077/en/694636/23/Avochato_logo.jpg",
+    src: "https://youmatter.world/app/uploads/sites/2/2018/12/avocado-benefits-production-environmental-impact.jpg",
     altText: "Avocado 1"
   },
   {
-    src: "https://cleananddelicious.com/wp-content/uploads/2016/03/Avocad0-CD.jpg",
+    src: "https://images.agoramedia.com/everydayhealth/gcms/All-About-Avocados--Health-Benefits-Nutrition-Facts-How-to-Eat-722x406.jpg",
     altText: "Avocado 2"
   },
   {
     src:
-      "https://www.othaimmarkets.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/v/avocado-lancastria.jpg",
+      "https://ksassets.timeincuk.net/wp/uploads/sites/46/2018/07/New-Project-2019-07-17T150924.311-920x518.jpg",
     altText: "Avocado 3"
   },
   {
