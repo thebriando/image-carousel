@@ -9,17 +9,11 @@ import { Header } from "./components/Header/Header";
 function App() {
   return (
     <div>
-      <HashRouter basename='/'>
+      <HashRouter basename="/">
         <Header />
-        <Route exact path="/">
-          <WithLibrariesCarousel items={images} />
-        </Route>
-        <Route path="/with-libraries">
-          <WithLibrariesCarousel items={images} />
-        </Route>
-        <Route path="/without-libraries">
-          <WithoutLibrariesCarousel items={images} />
-        </Route>
+        <Route exact path="/" render={() => <WithLibrariesCarousel items={images} />} />
+        <Route path="/with-libraries" render={() => <WithLibrariesCarousel items={images} />} />
+        <Route path="/without-libraries" render={() => <WithoutLibrariesCarousel items={images} />} />
       </HashRouter>
     </div>
   );
