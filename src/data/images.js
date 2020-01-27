@@ -1,6 +1,6 @@
 export const images = [
   {
-    src: "https://youmatter.world/app/uploads/sites/2/2018/12/avocado-benefits-production-environmental-impact.jpg",
+    src: "https://mms.businesswire.com/media/20181207005077/en/694636/23/Avochato_logo.jpg",
     altText: "Avocado 1"
   },
   {
