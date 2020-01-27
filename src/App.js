@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import "./App.css";
 import { WithLibrariesCarousel } from "./components/WithLibrariesCarousel/WithLibrariesCarousel";
 import { WithoutLibrariesCarousel } from "./components/WithoutLibrariesCarousel/WithoutLibrariesCarousel";
@@ -9,8 +9,8 @@ import { Header } from "./components/Header/Header";
 function App() {
   return (
     <div>
-      <Header />
-      <Router>
+      <HashRouter basename='/'>
+        <Header />
         <Route exact path="/">
           <WithLibrariesCarousel items={images} />
         </Route>
@@ -20,7 +20,7 @@ function App() {
         <Route path="/without-libraries">
           <WithoutLibrariesCarousel items={images} />
         </Route>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
