@@ -1,3 +1,9 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .header-jumbotron {
   margin-bottom: 0 !important;
   text-align: center;
