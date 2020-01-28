@@ -9,8 +9,18 @@ export class WithoutLibrariesCarousel extends Component {
     };
   }
   // Sets interval at 5000, so the picture changes every five seconds
-  componentDidMount() {
+  resetInterval = () => {
+    clearInterval(this.interval);
     this.interval = setInterval(() => this.next(), 5000);
+  }
+  componentDidMount() {
+    this.resetInterval();
+  }
+  // resets interval every time a new picture is shown
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.current !== this.state.current) {
+      this.resetInterval();
+    }
   }
   // Clears timer to prevent errors and memory leaks
   componentWillUnmount() {
