@@ -1,70 +1,11 @@
 The site is published [here](https://thebriando.github.io/image-carousel/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Part 1
+I chose to use [Reactstrap](https://reactstrap.github.io/) as my library of choice for part 1 since it has a convenient [carousel component](https://reactstrap.github.io/components/carousel/) that does exactly what I need for the purposes of this use case. I chose to use the `<UncontrolledCarousel>` in particular because it has all the functionality that I need, and it performs the correct behavior when navigating with the arrows and with the automatic sliding. 
 
-## Available Scripts
+However, there were a few styling changes that I thought were necessary in order for this component to be intuitive. The arrows and indicators were white and are displayed directly on top of the images. This made the navigation hard to see with light-colored backgrounds, and impossible to see with white backgrounds, so I added box shadows to these elements to make them stand out.
 
-In the project directory, you can run:
+# Part 2
+After making the carousel for part 1, I tried to solve some of the issues I had with Reactstrap's carousel in my implementation. I placed all of the navigation controls outside of the image, so that they are more accessible to the user and don't get obscured by different colored images. 
 
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The main functionality for this component is broken down into three functions: `next()` for going to the next image in the deck (or the first image if the current image is the last in the stack), `prev()` for going to the previous image in the stack (or the last image if the current image is the first image) and `change()` for changing the image using the selectors at the bottom. I also used lifecycle methods to control the automatic sliding.
