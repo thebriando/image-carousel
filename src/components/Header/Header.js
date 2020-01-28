@@ -8,7 +8,7 @@ export const Header = () => {
     <div>
       <Jumbotron className="header-jumbotron" fluid>
         <Container fluid>
-          <h1 className="display-3">Image Carousel</h1>
+          <h1>Image Carousel</h1>
         </Container>
       </Jumbotron>
       <Navbar className="header-navbar" color="light" light expand="md">
