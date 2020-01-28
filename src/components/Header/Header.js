@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron, Container, Nav, Navbar, NavItem, NavLink } from "reactstrap";
+import { Jumbotron, Container, Nav, Navbar, NavItem } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
@@ -14,18 +14,14 @@ export const Header = () => {
       <Navbar className="header-navbar" color="light" light expand="md">
         <Nav navbar>
           <NavItem>
-            <NavLink>
-              <Link to="/with-libraries" className="nav-link">
-                With Libraries
-              </Link>
-            </NavLink>
+            <Link to="/with-libraries" className="nav-link">
+              With Libraries
+            </Link>
           </NavItem>
           <NavItem>
-            <NavLink>
-              <Link to="without-libraries" className="nav-link">
-                Without Libraries
-              </Link>
-            </NavLink>
+            <Link to="without-libraries" className="nav-link">
+              Without Libraries
+            </Link>
           </NavItem>
         </Nav>
       </Navbar>
